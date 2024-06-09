@@ -12,15 +12,14 @@ package utilities;
 	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 	public class ExcelUtility {
-
-	public static FileInputStream file;
+    public static FileInputStream file;
 	public static XSSFWorkbook wb;
 	public static XSSFSheet sh ; 
 
 	public static String readStringData(int i , int j, String sheet) 
 	{
 		try {
-		file = new FileInputStream("C:\\Users\\Meera Rupak\\eclipse-workspace\\FinalProject\\src\\main\\project\\utilities\\Excelread.xlsx" );
+		file = new FileInputStream("C:\\Users\\Meera Rupak\\git\\ProjectQALegend\\ProjectFinal\\src\\main\\resources\\Test_Data.xlsx");
 		wb = new XSSFWorkbook(file);
 		sh = wb.getSheet(sheet);
 		XSSFRow row = sh.getRow(i);
@@ -29,13 +28,12 @@ package utilities;
 		} catch (Exception e) {
 			throw new RuntimeException("Test data Excel sheet not found");
 		}
-		
-		
-	}
-		public static String readIntegerData(int i, int j, String sheet) 
+		}
+	
+	public static String readIntegerData(int i, int j, String sheet) 
 		{
 			try {
-			file = new FileInputStream("C:\\Users\\Meera Rupak\\eclipse-workspace\\FinalProject\\src\\main\\project\\utilities\\Excelread.xlsx");
+			file = new FileInputStream("C:\\Users\\Meera Rupak\\git\\ProjectQALegend\\ProjectFinal\\src\\main\\resources\\Test_Data.xlsx");
 			wb = new XSSFWorkbook(file);
 			sh = wb.getSheet(sheet);
 			XSSFRow row = sh.getRow(i);
@@ -47,7 +45,7 @@ package utilities;
 			}
 			}
 			
-		}
+      }
 
 
 

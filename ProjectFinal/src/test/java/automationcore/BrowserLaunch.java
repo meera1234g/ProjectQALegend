@@ -38,7 +38,7 @@ public  void initialisebrowser(String browser)
 		}
 		
 		driver.manage().window().maximize();
-		
+		driver.get("https://qalegend.com/billing/public/login");
 		
 	}
 @BeforeMethod
@@ -56,7 +56,7 @@ public  void initialisebrowser(String browser)
 public void closeBrowser() 
 {
 	
-	  driver.close();
+	 // driver.close();
  }
 
 
