@@ -6,7 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+
 import automationcore.BrowserLaunch;
+import listeners.RetryAnalyzer;
 import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -46,7 +49,7 @@ import utilities.RandomDataUtility;
 	    }
 		
 		
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void verifyUserLoginWithNewAddedUser() 
 		{
 		    String username = ExcelUtility.readStringData(0, 0, "AddUser");
@@ -55,7 +58,7 @@ import utilities.RandomDataUtility;
 			String last_name = RandomDataUtility.getLastName();
 			String mailid = first_name+"."+last_name+"@yahoo.com";
 			String password_new = first_name+"."+last_name;
-			String username_fieldnew = first_name+"user";
+			String username_fieldnew = first_name;
 			
 			LoginPage login = new LoginPage(driver);
 			login.enterUserName(username);

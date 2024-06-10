@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-10T01:34:42 IST" name="Default suite" finished-at="2024-06-10T01:34:56 IST" duration-ms="14459">
+  <suite started-at="2024-06-10T01:56:10 IST" name="Default suite" finished-at="2024-06-10T01:56:33 IST" duration-ms="23292">
     <groups>
     </groups>
-    <test started-at="2024-06-10T01:34:42 IST" name="Default test" finished-at="2024-06-10T01:34:56 IST" duration-ms="14459">
-      <class name="test.UserMangement">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UserMangement@5d534f5d]" started-at="2024-06-10T01:34:42 IST" name="setup" finished-at="2024-06-10T01:34:51 IST" duration-ms="8632" status="PASS">
+    <test started-at="2024-06-10T01:56:10 IST" name="Default test" finished-at="2024-06-10T01:56:33 IST" duration-ms="23292">
+      <class name="test.AddUser">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.AddUser@2e3967ea]" started-at="2024-06-10T01:56:10 IST" name="setup" finished-at="2024-06-10T01:56:16 IST" duration-ms="5751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserMangement()[pri:0, instance:test.UserMangement@5d534f5d]" started-at="2024-06-10T01:34:51 IST" name="verifyUserMangement" finished-at="2024-06-10T01:34:56 IST" duration-ms="5769" status="PASS">
+        <test-method signature="verifyUserLoginWithNewAddedUser()[pri:0, instance:test.AddUser@2e3967ea]" started-at="2024-06-10T01:56:16 IST" name="verifyUserLoginWithNewAddedUser" finished-at="2024-06-10T01:56:33 IST" duration-ms="17472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserMangement -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:test.UserMangement@5d534f5d]" started-at="2024-06-10T01:34:56 IST" name="closeBrowser" finished-at="2024-06-10T01:34:56 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- verifyUserLoginWithNewAddedUser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:test.AddUser@2e3967ea]" started-at="2024-06-10T01:56:33 IST" name="closeBrowser" finished-at="2024-06-10T01:56:33 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- test.UserMangement -->
+      </class> <!-- test.AddUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

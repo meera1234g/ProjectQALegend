@@ -53,12 +53,24 @@ public  void initialisebrowser(String browser)
   }
   
 @AfterMethod
-public void closeBrowser() 
-{
-	
-	 // driver.close();
+
+
+public void closeBrowser(ITestResult result) throws IOException {
+	if (result.getStatus()== ITestResult.FAILURE) {
+		takeScreenshot(result);
+	}
+	  driver.close();
  }
 
+
+public void takeScreenshot(ITestResult result ) throws IOException 
+{
+	TakesScreenshot takescreenshot = (TakesScreenshot) driver ;
+	File screenshot = takescreenshot.getScreenshotAs(OutputType.FILE); 
+	FileUtils.copyFile(screenshot, new File("./ScreenShot/" +result.getName()+ ".png" ));
+	
+	
+}
 
 	}
 
