@@ -43,7 +43,6 @@ public  void initialisebrowser(String browser)
 	}
 @BeforeMethod
 
-//first
   public void setup() 
   { 
 	
@@ -53,8 +52,6 @@ public  void initialisebrowser(String browser)
   }
   
 @AfterMethod
-
-
 public void closeBrowser(ITestResult result) throws IOException {
 	if (result.getStatus()== ITestResult.FAILURE) {
 		takeScreenshot(result);

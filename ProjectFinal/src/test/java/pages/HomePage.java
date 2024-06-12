@@ -1,11 +1,18 @@
 package pages;
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.DateUtility;
 
 public class HomePage 
 {
@@ -59,6 +66,9 @@ WebElement signout_dashboard;
 @FindBy(xpath = "//a[@class='btn btn-default btn-flat'and@href='https://qalegend.com/billing/public/logout']")
 WebElement signout_button;
 
+//@FindBy(id = "//h1[starts-with(text(), 'Welcome')]")
+//WebElement profile_button;
+
 
 
 
@@ -75,7 +85,22 @@ public String getActualTitle()
  return title;
 }
  
-public String getDisplayedDate() 
+public String getLoginDate() 
+{
+	String logindate = date_field.getText();
+	return logindate;
+}
+
+public String getCurrentDate()
+{
+ String currentdate = DateUtility.getUserLoginDate("dd-MM-YYYY");
+ return currentdate;
+}
+
+
+
+
+/*public String getDisplayedDate() 
 {
  String displayeddate = date_field.getText();
  return displayeddate;
@@ -86,7 +111,7 @@ public String getSystemDate()
 {
  String system_date =java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
  return system_date;
-}
+}*/
  
 public void getCalculatorfield() 
 {
@@ -104,7 +129,11 @@ public String getSumofTwoNumbers()
   sum_number.click();
   second_number.click();
   equalto_button.click();
+  //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//  WebElement result_field = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("resultElementId"))); // Replace with your actual locator
   String result = result_field.getText();
+ 
+ 
   return result;
  }
 
@@ -126,5 +155,11 @@ public void clickOnSignoutDashBoad()
 public void clickOnSignoutButton() 
 {
 	  signout_button.click();
+}
+public String getTextofProfile() 
+{
+	String text = welcome_user.getText();
+	return text;
+	
 }
 }

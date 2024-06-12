@@ -40,7 +40,6 @@ public class AddUserPage
     WebElement save_button;
     
    
-   
     
     public void clickOnAddUserButton() 
     {
@@ -82,6 +81,7 @@ public class AddUserPage
     {
     	save_button.click();
     }
- 
+     
+    
  }
 

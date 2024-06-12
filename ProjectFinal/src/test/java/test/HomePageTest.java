@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import automationcore.BrowserLaunch;
+import constants.Constants;
+import constants.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -14,9 +16,9 @@ import utilities.ExcelUtility;
 	  @Test
 	  public void getPageTitle() 
 		{
-		    String username = ExcelUtility.readStringData(0, 0, "HomePage");
-		    String password = ExcelUtility.readIntegerData(0, 1, "HomePage");
-		    String expected_title = ExcelUtility.readStringData(0, 2, "HomePage");
+		    String username = ExcelUtility.readStringData(0, 0,Constants.HOME_PAGE);
+		    String password = ExcelUtility.readIntegerData(0, 1, Constants.HOME_PAGE);
+		    String expected_title = ExcelUtility.readStringData(0, 2, Constants.HOME_PAGE);
 		    
 		    LoginPage login = new LoginPage(driver);
 		    login.enterUserName(username);
@@ -24,34 +26,32 @@ import utilities.ExcelUtility;
 		    HomePage home =  login.clickOnLoginButton();
 		    String actual_title = home.getActualTitle();
 		    System.out.println("The title of the page is " +actual_title);
-			Assert.assertEquals(actual_title, expected_title,"The Titles do not match");
+			Assert.assertEquals(actual_title, expected_title,Messages.TITLE_MISMATCH);
 		}
 	  
 	  @Test
 		
-		public void verifyDateDisplayedtToSystemDate() 
+		public void verifyUserLoginDate() 
 		{
 
-		    String username = ExcelUtility.readStringData(0, 0, "HomePage");
-		    String password = ExcelUtility.readIntegerData(0, 1, "HomePage");
+		    String username = ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE);
+		    String password = ExcelUtility.readIntegerData(0, 1, Constants.HOME_PAGE);
 		    LoginPage login = new LoginPage(driver);
 		    login.enterUserName(username);
 		    login.enterPassword(password);
 		    HomePage home =  login.clickOnLoginButton();
-			String  date_fieldtext = home.getDisplayedDate();
-			String system_date = home.getSystemDate();
-            System.out.println("The system date is " +system_date);
-			System.out.println("Date Text" + date_fieldtext );
-			Assert.assertEquals(date_fieldtext, system_date,"The Date Displayed is not as same as System Date");
-			
+			String  date_fieldtext = home.getLoginDate();
+			String system_date = home.getCurrentDate();
+            Assert.assertEquals(date_fieldtext, system_date,Messages.TITLE_MISMATCH);
 		}
 	  
 	  @Test
 	  
 	  public void getCaluculatorResult() 
 	  {
-		    String username = ExcelUtility.readStringData(0, 0, "HomePage");
-		    String password = ExcelUtility.readIntegerData(0, 1, "HomePage");
+		    String username = ExcelUtility.readStringData(0, 0,Constants.HOME_PAGE );
+		    String password = ExcelUtility.readIntegerData(0, 1,Constants.HOME_PAGE);
+		    String expected_result = ExcelUtility.readIntegerData(0, 3,Constants.HOME_PAGE);
 		    LoginPage login = new LoginPage(driver);
 		    login.enterUserName(username);
 		    login.enterPassword(password);
@@ -61,6 +61,8 @@ import utilities.ExcelUtility;
 		    homepage.getCalculatorfield();
 		    String result_new = homepage.getSumofTwoNumbers();
 		    System.out.println("The result is " +result_new);
+		    Assert.assertEquals(result_new, expected_result, Messages.CALUCLTOR_ERROR);
+		    
 		}
    }
 	  
