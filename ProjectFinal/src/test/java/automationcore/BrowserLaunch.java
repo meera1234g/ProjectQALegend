@@ -15,6 +15,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import utilities.WaitUtility;
+
 public class BrowserLaunch 
 {
 protected	WebDriver driver ;
@@ -38,16 +40,17 @@ public  void initialisebrowser(String browser)
 		}
 		
 		driver.manage().window().maximize();
-		driver.get("https://qalegend.com/billing/public/login");
+		
 		
 	}
 @BeforeMethod
-
-  public void setup() 
+@Parameters({"browser","baseurl"})
+  public void setup(String browsername , String url) 
   { 
 	
-	  initialisebrowser("Chrome"); 
-	
+	  initialisebrowser(browsername); 
+	  driver.get(url);
+	  WaitUtility.waitUsingImplicitWait(driver);
 	  
   }
   
@@ -56,7 +59,7 @@ public void closeBrowser(ITestResult result) throws IOException {
 	if (result.getStatus()== ITestResult.FAILURE) {
 		takeScreenshot(result);
 	}
-	  driver.close();
+	 // driver.close();
  }
 
 

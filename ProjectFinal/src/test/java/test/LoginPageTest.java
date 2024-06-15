@@ -18,7 +18,7 @@ import utilities.ExcelUtility;
 public class LoginPageTest extends BrowserLaunch
 {
 	
-@Test
+@Test(groups = {"Sanity"})
   public void verifyUserLoginWithValidCredentials()
   {
 	    String username = ExcelUtility.readStringData(0, 0,Constants.LOGIN_PAGE);

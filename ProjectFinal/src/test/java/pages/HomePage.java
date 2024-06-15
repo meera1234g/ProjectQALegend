@@ -130,11 +130,10 @@ public String getSumofTwoNumbers()
   second_number.click();
   equalto_button.click();
   //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//  WebElement result_field = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("resultElementId"))); // Replace with your actual locator
-  String result = result_field.getText();
+ //  WebElement result_field = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("resultElementId"))); // Replace with your actual locator
  
- 
-  return result;
+	String result = result_field.getText();
+ return result;
  }
 
 public void clickOnUserManagementbutton() 

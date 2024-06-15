@@ -39,6 +39,9 @@ public class AddUserPage
     @FindBy(id ="submit_user_button")
     WebElement save_button;
     
+    @FindBy(className = "toast-success")
+    WebElement success_message;
+    
    
     
     public void clickOnAddUserButton() 

@@ -4,7 +4,9 @@
 	<listeners>
 	<listener class-name="generatereport.Listeners"></listener>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test  name="Test">
+	  <parameter name="browser" value="Chrome"></parameter>
+	  <parameter name="baseurl" value="https://qalegend.com/billing/public/login"></parameter>
     <classes>
         <class name="test.LoginPageTest">
 			<methods>

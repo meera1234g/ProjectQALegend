@@ -39,13 +39,13 @@ public class ResetPage
 		passwordreset_button.click();
 	}
 	
-	public String getTextmsgOfResetmailfail(String mailidtext) 
+	public String getTextmsgOfResetmailfail() 
 	{
-		String textmsg = passwordresetfailure_text.getText();
-		return textmsg;
+		String actual_text = passwordresetfailure_text.getText();
+		return actual_text;
 		
 	}
-	public String getTextmsgOfResetmailsuccess(String mailidtext) 
+	public String getTextmsgOfResetmailsuccess() 
 	{
 		String textmsg = passwordresetsuccess_text.getText();
 		return textmsg;

@@ -23,6 +23,15 @@ public class UsersPage
 	@FindBy(xpath="//i[@class='glyphicon glyphicon-edit']")
 	WebElement edit_button;
 	
+	@FindBy(xpath="//i[@class='glyphicon glyphicon-trash']")
+	WebElement delete_button;
+	
+	@FindBy(xpath="//button[@class='swal-button swal-button--confirm swal-button--danger']")
+	WebElement ok_button;
+	
+	@FindBy(xpath="//td[@class='sorting_1']")
+	WebElement name_field;
+	
 	
 	//@FindBy(xpath="//div[@class='dataTables_info']")
 	   //WebElement showing1of1;
@@ -49,6 +58,15 @@ public class UsersPage
    	 
     }*/
     
+    
+    public String getTextOfName()
+	  {
+		
+	 String name =	name_field.getText();
+	return name;
+		  
+	  }
+    
     public void clickEditButtoun()
 	  {
 		
@@ -56,4 +74,17 @@ public class UsersPage
 		  
 	  }
     
+    public void clickDeleteButtoun()
+	  {
+		
+		delete_button.click();
+		  
+	  }
+    
+    public void clickOkButtoun()
+	  {
+		
+		ok_button.click();
+		  
+	  }
 }

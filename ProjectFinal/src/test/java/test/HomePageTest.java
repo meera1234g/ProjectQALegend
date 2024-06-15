@@ -13,7 +13,7 @@ import utilities.ExcelUtility;
 
   public class HomePageTest extends BrowserLaunch 
    {
-	  @Test
+	  @Test(groups = {"Sanity"})
 	  public void getPageTitle() 
 		{
 		    String username = ExcelUtility.readStringData(0, 0,Constants.HOME_PAGE);
@@ -36,13 +36,14 @@ import utilities.ExcelUtility;
 
 		    String username = ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE);
 		    String password = ExcelUtility.readIntegerData(0, 1, Constants.HOME_PAGE);
+		    
 		    LoginPage login = new LoginPage(driver);
 		    login.enterUserName(username);
 		    login.enterPassword(password);
 		    HomePage home =  login.clickOnLoginButton();
 			String  date_fieldtext = home.getLoginDate();
 			String system_date = home.getCurrentDate();
-            Assert.assertEquals(date_fieldtext, system_date,Messages.TITLE_MISMATCH);
+            Assert.assertEquals(date_fieldtext, system_date,Messages.DATE_MISMATCH);
 		}
 	  
 	  @Test
@@ -52,6 +53,7 @@ import utilities.ExcelUtility;
 		    String username = ExcelUtility.readStringData(0, 0,Constants.HOME_PAGE );
 		    String password = ExcelUtility.readIntegerData(0, 1,Constants.HOME_PAGE);
 		    String expected_result = ExcelUtility.readIntegerData(0, 3,Constants.HOME_PAGE);
+		    
 		    LoginPage login = new LoginPage(driver);
 		    login.enterUserName(username);
 		    login.enterPassword(password);
