@@ -13,7 +13,7 @@ import utilities.ExcelUtility;
 
   public class HomePageTest extends BrowserLaunch 
    {
-	  @Test(groups = {"Sanity"})
+	  @Test(groups = "Sanity")
 	  public void getPageTitle() 
 		{
 		    String username = ExcelUtility.readStringData(0, 0,Constants.HOME_PAGE);
@@ -29,7 +29,7 @@ import utilities.ExcelUtility;
 			Assert.assertEquals(actual_title, expected_title,Messages.TITLE_MISMATCH);
 		}
 	  
-	  @Test
+	  @Test(groups = "Regression" )
 		
 		public void verifyUserLoginDate() 
 		{

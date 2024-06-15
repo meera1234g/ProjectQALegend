@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="6" ignored="6" total="14" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="0" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-15T00:59:29 IST" name=" Functional Suite" finished-at="2024-06-15T00:59:31 IST" duration-ms="2064">
+  <suite started-at="2024-06-15T08:46:16 IST" name=" Functional Suite" finished-at="2024-06-15T08:46:17 IST" duration-ms="1278">
     <groups>
       <group name="Sanity">
-        <method signature="HomePageTest.getPageTitle()[pri:0, instance:test.HomePageTest@6892b3b6]" name="getPageTitle" class="test.HomePageTest"/>
-        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@45099dd3]" name="verifyUserLoginWithValidCredentials" class="test.LoginPageTest"/>
+        <method signature="HomePageTest.getPageTitle()[pri:0, instance:test.HomePageTest@2e8c1c9b]" name="getPageTitle" class="test.HomePageTest"/>
+        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@13e344d]" name="verifyUserLoginWithValidCredentials" class="test.LoginPageTest"/>
       </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="HomePageTest.verifyUserLoginDate()[pri:0, instance:test.HomePageTest@2e8c1c9b]" name="verifyUserLoginDate" class="test.HomePageTest"/>
+        <method signature="LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" name="verifyUserLoginWithInvalidCredential" class="test.LoginPageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-06-15T00:59:29 IST" name="Chrome Test" finished-at="2024-06-15T00:59:31 IST" duration-ms="2064">
+    <test started-at="2024-06-15T08:46:16 IST" name="All Test" finished-at="2024-06-15T08:46:17 IST" duration-ms="1278">
       <class name="test.HomePageTest">
-        <test-method retried="true" signature="getPageTitle()[pri:0, instance:test.HomePageTest@6892b3b6]" started-at="2024-06-15T00:59:31 IST" name="getPageTitle" finished-at="2024-06-15T00:59:31 IST" duration-ms="125" status="SKIP">
+        <test-method signature="getPageTitle()[pri:0, instance:test.HomePageTest@2e8c1c9b]" started-at="2024-06-15T08:46:17 IST" name="getPageTitle" finished-at="2024-06-15T08:46:17 IST" duration-ms="147" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -20,7 +24,7 @@
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
 at test.HomePageTest.getPageTitle(HomePageTest.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -57,7 +61,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPageTitle -->
-        <test-method retried="true" signature="getPageTitle()[pri:0, instance:test.HomePageTest@6892b3b6]" started-at="2024-06-15T00:59:31 IST" name="getPageTitle" finished-at="2024-06-15T00:59:31 IST" duration-ms="117" status="SKIP">
+        <test-method signature="verifyUserLoginDate()[pri:0, instance:test.HomePageTest@2e8c1c9b]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginDate" finished-at="2024-06-15T08:46:17 IST" duration-ms="87" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -66,17 +70,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.HomePageTest.getPageTitle(HomePageTest.java:24)
+at test.HomePageTest.verifyUserLoginDate(HomePageTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -102,102 +106,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPageTitle -->
-        <test-method retried="true" signature="getPageTitle()[pri:0, instance:test.HomePageTest@6892b3b6]" started-at="2024-06-15T00:59:31 IST" name="getPageTitle" finished-at="2024-06-15T00:59:31 IST" duration-ms="98" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.HomePageTest.getPageTitle(HomePageTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPageTitle -->
-        <test-method signature="getPageTitle()[pri:0, instance:test.HomePageTest@6892b3b6]" started-at="2024-06-15T00:59:31 IST" name="getPageTitle" finished-at="2024-06-15T00:59:31 IST" duration-ms="106" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.HomePageTest.getPageTitle(HomePageTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPageTitle -->
+        </test-method> <!-- verifyUserLoginDate -->
       </class> <!-- test.HomePageTest -->
       <class name="test.LoginPageTest">
-        <test-method retried="true" signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@45099dd3]" started-at="2024-06-15T00:59:29 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T00:59:30 IST" duration-ms="984" status="SKIP">
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:16 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="680" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -206,9 +130,9 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:29)
+at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -242,8 +166,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method retried="true" signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@45099dd3]" started-at="2024-06-15T00:59:30 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T00:59:30 IST" duration-ms="165" status="SKIP">
+        </test-method> <!-- verifyUserLoginWithInvalidCredential -->
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="62" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[asd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -252,17 +188,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:29)
+at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -288,8 +224,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method retried="true" signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@45099dd3]" started-at="2024-06-15T00:59:30 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T00:59:30 IST" duration-ms="196" status="SKIP">
+        </test-method> <!-- verifyUserLoginWithInvalidCredential -->
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="55" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[asd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -298,17 +246,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:29)
+at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -334,8 +282,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@45099dd3]" started-at="2024-06-15T00:59:30 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T00:59:31 IST" duration-ms="174" status="FAIL">
+        </test-method> <!-- verifyUserLoginWithInvalidCredential -->
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="139" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -344,7 +292,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
 at pages.LoginPage.enterUserName(LoginPage.java:35)
 at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -353,8 +301,8 @@ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Delegating
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -382,6 +330,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithValidCredentials -->
       </class> <!-- test.LoginPageTest -->
-    </test> <!-- Chrome Test -->
+    </test> <!-- All Test -->
   </suite> <!--  Functional Suite -->
 </testng-results>

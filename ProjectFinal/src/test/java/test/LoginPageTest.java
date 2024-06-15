@@ -18,7 +18,7 @@ import utilities.ExcelUtility;
 public class LoginPageTest extends BrowserLaunch
 {
 	
-@Test(groups = {"Sanity"})
+@Test(groups = "Sanity")
   public void verifyUserLoginWithValidCredentials()
   {
 	    String username = ExcelUtility.readStringData(0, 0,Constants.LOGIN_PAGE);
@@ -33,7 +33,7 @@ public class LoginPageTest extends BrowserLaunch
 	    Assert.assertEquals(actual_result,expected_result , Messages.LOGIN_FAILURE);
    }
 
-@Test(dataProvider = "invaliduserCredentials", dataProviderClass = DataProviders.class)
+@Test(groups = "Regression" , dataProvider = "invaliduserCredentials", dataProviderClass = DataProviders.class)
 public void verifyUserLoginWithInvalidCredential(String username , String password)
 	{
 		String expected_errormsg = ExcelUtility.readStringData(0, 3 ,Constants.LOGIN_PAGE);
