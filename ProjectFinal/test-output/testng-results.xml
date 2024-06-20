@@ -1,115 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="0" failed="6" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-15T08:46:16 IST" name=" Functional Suite" finished-at="2024-06-15T08:46:17 IST" duration-ms="1278">
+  <suite started-at="2024-06-21T00:39:29 IST" name="Suite" finished-at="2024-06-21T00:42:28 IST" duration-ms="179728">
     <groups>
       <group name="Sanity">
-        <method signature="HomePageTest.getPageTitle()[pri:0, instance:test.HomePageTest@2e8c1c9b]" name="getPageTitle" class="test.HomePageTest"/>
-        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@13e344d]" name="verifyUserLoginWithValidCredentials" class="test.LoginPageTest"/>
+        <method signature="HomePageTest.getPageTitle()[pri:0, instance:test.HomePageTest@563f38c4]" name="getPageTitle" class="test.HomePageTest"/>
+        <method signature="LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" name="verifyUserLoginWithInvalidCredential" class="test.LoginPageTest"/>
       </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="HomePageTest.verifyUserLoginDate()[pri:0, instance:test.HomePageTest@2e8c1c9b]" name="verifyUserLoginDate" class="test.HomePageTest"/>
-        <method signature="LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" name="verifyUserLoginWithInvalidCredential" class="test.LoginPageTest"/>
-      </group> <!-- Regression -->
+      <group name="Reggression">
+        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@4b45a2f5]" name="verifyUserLoginWithValidCredentials" class="test.LoginPageTest"/>
+      </group> <!-- Reggression -->
+      <group name="Smoke">
+        <method signature="HomePageTest.verifyUserLoginDate()[pri:0, instance:test.HomePageTest@563f38c4]" name="verifyUserLoginDate" class="test.HomePageTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-06-15T08:46:16 IST" name="All Test" finished-at="2024-06-15T08:46:17 IST" duration-ms="1278">
+    <test started-at="2024-06-21T00:39:29 IST" name="Test" finished-at="2024-06-21T00:42:28 IST" duration-ms="179728">
+      <class name="test.UserMangementTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.UserMangementTest@7ef82753]" started-at="2024-06-21T00:42:03 IST" name="setup" finished-at="2024-06-21T00:42:23 IST" duration-ms="20255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPoolElementinUserMangement()[pri:0, instance:test.UserMangementTest@7ef82753]" started-at="2024-06-21T00:42:23 IST" name="verifyPoolElementinUserMangement" description="Verify Selection and Printing of list of elements under UserMangement" finished-at="2024-06-21T00:42:28 IST" duration-ms="5073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPoolElementinUserMangement -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.UserMangementTest@7ef82753]" started-at="2024-06-21T00:42:28 IST" name="closeBrowser" finished-at="2024-06-21T00:42:28 IST" duration-ms="101" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPoolElementinUserMangement status=SUCCESS method=UserMangementTest.verifyPoolElementinUserMangement()[pri:0, instance:test.UserMangementTest@7ef82753] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.UserMangementTest -->
+      <class name="test.EditUserTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.EditUserTest@3e27ba32]" started-at="2024-06-21T00:41:51 IST" name="setup" finished-at="2024-06-21T00:41:57 IST" duration-ms="6341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="editAnExistingUser()[pri:0, instance:test.EditUserTest@3e27ba32]" started-at="2024-06-21T00:41:57 IST" name="editAnExistingUser" description="To verify Editing Details of an Exsisting User" finished-at="2024-06-21T00:42:03 IST" duration-ms="5868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editAnExistingUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.EditUserTest@3e27ba32]" started-at="2024-06-21T00:42:03 IST" name="closeBrowser" finished-at="2024-06-21T00:42:03 IST" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=editAnExistingUser status=SUCCESS method=EditUserTest.editAnExistingUser()[pri:0, instance:test.EditUserTest@3e27ba32] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.EditUserTest -->
+      <class name="test.ResetPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:16 IST" name="setup" finished-at="2024-06-21T00:40:23 IST" duration-ms="6180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyForgotpasswordWithInvalidEmailid()[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:23 IST" name="verifyForgotpasswordWithInvalidEmailid" description="Verify Forgot Password with Invalid EmailID" finished-at="2024-06-21T00:40:24 IST" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotpasswordWithInvalidEmailid -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:24 IST" name="closeBrowser" finished-at="2024-06-21T00:40:24 IST" duration-ms="117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgotpasswordWithInvalidEmailid status=SUCCESS method=ResetPageTest.verifyForgotpasswordWithInvalidEmailid()[pri:0, instance:test.ResetPageTest@543295b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:24 IST" name="setup" finished-at="2024-06-21T00:40:30 IST" duration-ms="6387" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyForgotpasswordWithValidEmailid()[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:30 IST" name="verifyForgotpasswordWithValidEmailid" description="Verify Forgot Password with valid EmailID" finished-at="2024-06-21T00:40:32 IST" duration-ms="1526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotpasswordWithValidEmailid -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.ResetPageTest@543295b0]" started-at="2024-06-21T00:40:32 IST" name="closeBrowser" finished-at="2024-06-21T00:40:32 IST" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgotpasswordWithValidEmailid status=SUCCESS method=ResetPageTest.verifyForgotpasswordWithValidEmailid()[pri:0, instance:test.ResetPageTest@543295b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.ResetPageTest -->
+      <class name="test.UsersTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.UsersTest@117159c0]" started-at="2024-06-21T00:41:40 IST" name="setup" finished-at="2024-06-21T00:41:46 IST" duration-ms="5663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySearchByField()[pri:0, instance:test.UsersTest@117159c0]" started-at="2024-06-21T00:41:46 IST" name="verifySearchByField" description="Verify Search By Field Functionality" finished-at="2024-06-21T00:41:50 IST" duration-ms="4362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchByField -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.UsersTest@117159c0]" started-at="2024-06-21T00:41:50 IST" name="closeBrowser" finished-at="2024-06-21T00:41:51 IST" duration-ms="162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySearchByField status=SUCCESS method=UsersTest.verifySearchByField()[pri:0, instance:test.UsersTest@117159c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.UsersTest -->
       <class name="test.HomePageTest">
-        <test-method signature="getPageTitle()[pri:0, instance:test.HomePageTest@2e8c1c9b]" started-at="2024-06-15T08:46:17 IST" name="getPageTitle" finished-at="2024-06-15T08:46:17 IST" duration-ms="147" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.HomePageTest.getPageTitle(HomePageTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:00 IST" name="setup" finished-at="2024-06-21T00:40:05 IST" duration-ms="5378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getPageTitle()[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:05 IST" name="getPageTitle" description="Get the title of the Page" finished-at="2024-06-21T00:40:07 IST" duration-ms="2415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPageTitle -->
-        <test-method signature="verifyUserLoginDate()[pri:0, instance:test.HomePageTest@2e8c1c9b]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginDate" finished-at="2024-06-15T08:46:17 IST" duration-ms="87" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.HomePageTest.verifyUserLoginDate(HomePageTest.java:41)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:07 IST" name="closeBrowser" finished-at="2024-06-21T00:40:07 IST" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getPageTitle status=SUCCESS method=HomePageTest.getPageTitle()[pri:0, instance:test.HomePageTest@563f38c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:07 IST" name="setup" finished-at="2024-06-21T00:40:14 IST" duration-ms="6740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginDate()[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:14 IST" name="verifyUserLoginDate" description="Verify User Login Date" finished-at="2024-06-21T00:40:16 IST" duration-ms="2125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginDate -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.HomePageTest@563f38c4]" started-at="2024-06-21T00:40:16 IST" name="closeBrowser" finished-at="2024-06-21T00:40:16 IST" duration-ms="89" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginDate status=SUCCESS method=HomePageTest.verifyUserLoginDate()[pri:0, instance:test.HomePageTest@563f38c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- test.HomePageTest -->
       <class name="test.LoginPageTest">
-        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:16 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="680" status="FAIL">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:29 IST" name="setup" finished-at="2024-06-21T00:39:35 IST" duration-ms="5994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:35 IST" name="verifyUserLoginWithInvalidCredential" description="Verify Login with Invalid Credentials" data-provider="invaliduserCredentials" finished-at="2024-06-21T00:39:36 IST" duration-ms="1188" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -122,52 +273,37 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithInvalidCredential -->
-        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="62" status="FAIL">
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:36 IST" name="closeBrowser" finished-at="2024-06-21T00:39:36 IST" duration-ms="107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithInvalidCredential status=SUCCESS method=LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:36 IST" name="setup" finished-at="2024-06-21T00:39:45 IST" duration-ms="8968" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:45 IST" name="verifyUserLoginWithInvalidCredential" description="Verify Login with Invalid Credentials" data-provider="invaliduserCredentials" finished-at="2024-06-21T00:39:46 IST" duration-ms="682" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -180,52 +316,37 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithInvalidCredential -->
-        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithInvalidCredential" data-provider="invaliduserCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="55" status="FAIL">
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:46 IST" name="closeBrowser" finished-at="2024-06-21T00:39:46 IST" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithInvalidCredential status=SUCCESS method=LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:46 IST" name="setup" finished-at="2024-06-21T00:39:51 IST" duration-ms="4843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:51 IST" name="verifyUserLoginWithInvalidCredential" description="Verify Login with Invalid Credentials" data-provider="invaliduserCredentials" finished-at="2024-06-21T00:39:51 IST" duration-ms="648" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -238,98 +359,147 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithInvalidCredential(LoginPageTest.java:41)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithInvalidCredential -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@13e344d]" started-at="2024-06-15T08:46:17 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-06-15T08:46:17 IST" duration-ms="139" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pages.LoginPage.enterUserName(LoginPage.java:35)
-at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:29)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:51 IST" name="closeBrowser" finished-at="2024-06-21T00:39:51 IST" duration-ms="139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithInvalidCredential status=SUCCESS method=LoginPageTest.verifyUserLoginWithInvalidCredential(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:51 IST" name="setup" finished-at="2024-06-21T00:39:56 IST" duration-ms="4983" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:56 IST" name="verifyUserLoginWithValidCredentials" description="Verify UserLogin With Valid Credentials" finished-at="2024-06-21T00:39:59 IST" duration-ms="3089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4b45a2f5]" started-at="2024-06-21T00:39:59 IST" name="closeBrowser" finished-at="2024-06-21T00:40:00 IST" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@4b45a2f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- test.LoginPageTest -->
-    </test> <!-- All Test -->
-  </suite> <!--  Functional Suite -->
+      <class name="test.AddUserTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:40:32 IST" name="setup" finished-at="2024-06-21T00:40:38 IST" duration-ms="6341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddingUser()[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:40:38 IST" name="verifyAddingUser" description="Verify Adding A New User" finished-at="2024-06-21T00:40:45 IST" duration-ms="7000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddingUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:40:45 IST" name="closeBrowser" finished-at="2024-06-21T00:40:45 IST" duration-ms="116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddingUser status=SUCCESS method=AddUserTest.verifyAddingUser()[pri:0, instance:test.AddUserTest@54422e18] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:40:45 IST" name="setup" finished-at="2024-06-21T00:41:00 IST" duration-ms="15263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDeleteingNewlyAddedUser()[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:41:00 IST" name="verifyDeleteingNewlyAddedUser" description="Verify Deleting a New Added User" finished-at="2024-06-21T00:41:20 IST" duration-ms="20035" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteingNewlyAddedUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:41:20 IST" name="closeBrowser" finished-at="2024-06-21T00:41:21 IST" duration-ms="123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDeleteingNewlyAddedUser status=SUCCESS method=AddUserTest.verifyDeleteingNewlyAddedUser()[pri:0, instance:test.AddUserTest@54422e18] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:41:21 IST" name="setup" finished-at="2024-06-21T00:41:25 IST" duration-ms="4781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithNewAddedUser()[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:41:25 IST" name="verifyUserLoginWithNewAddedUser" description="Verify user Login with Newly Added User" finished-at="2024-06-21T00:41:40 IST" duration-ms="14887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithNewAddedUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.AddUserTest@54422e18]" started-at="2024-06-21T00:41:40 IST" name="closeBrowser" finished-at="2024-06-21T00:41:40 IST" duration-ms="141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithNewAddedUser status=SUCCESS method=AddUserTest.verifyUserLoginWithNewAddedUser()[pri:0, instance:test.AddUserTest@54422e18] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.AddUserTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

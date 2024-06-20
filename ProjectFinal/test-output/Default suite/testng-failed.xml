@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.Users">
+      <class name="test.HomePageTest">
         <methods>
           <include name="closeBrowser"/>
+          <include name="getCaluculatorResult"/>
           <include name="setup"/>
-          <include name="verifySearchByField"/>
         </methods>
-      </class> <!-- test.Users -->
+      </class> <!-- test.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,31 +11,29 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listeners implements ITestListener // iTestListner is used to customize report
+public class Listeners implements ITestListener 
 {
 	ExtentTest test;
 
 	ExtentReports extent = ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) 
-	{
+	public void onTestStart(ITestResult result) {
 
 		ITestListener.super.onTestStart(result);
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 
 	}
-	public void onTestSuccess(ITestResult result) 
-	{
+
+	public void onTestSuccess(ITestResult result) {
 
 		ITestListener.super.onTestSuccess(result);
 		extentTest.get().log(Status.PASS, "Test Passed");
 
 	}
-	
-	public void onTestFailure(ITestResult result) 
-	{
+
+	public void onTestFailure(ITestResult result) {
 
 		ITestListener.super.onTestFailure(result);
 		extentTest.get().log(Status.FAIL, "Test Failed");
@@ -47,49 +45,50 @@ public class Listeners implements ITestListener // iTestListner is used to custo
 					.get(result.getInstance());
 		} catch (IllegalArgumentException e) {
 
-		
-		e.printStackTrace();
-	} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
 
-		e.printStackTrace();
-	} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
 
-		e.printStackTrace();
-	} catch (SecurityException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
 
-		e.printStackTrace();
+			e.printStackTrace();
+		}
+
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
+					.get(result.getInstance());
+		} catch (Exception e) {
+		}
 	}
 
-	try {
-		driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
-				.get(result.getInstance());
-	} catch (Exception e) {
+	public void onTestSkipped(ITestResult result) {
+		ITestListener.super.onTestSkipped(result);
+		extentTest.get().log(Status.SKIP, "Test Skipped");
+		String testMethodName = result.getMethod().getMethodName();
+
 	}
-}
-public void onTestSkipped(ITestResult result) {
-	ITestListener.super.onTestSkipped(result);
-	extentTest.get().log(Status.SKIP, "Test Skipped");
-	String testMethodName = result.getMethod().getMethodName();
 
-}
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 
-public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+	}
 
-	ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
-}
-public void onTestFailedWithTimeout(ITestResult result) {
+	public void onTestFailedWithTimeout(ITestResult result) {
 
-	ITestListener.super.onTestFailedWithTimeout(result);
-}
+		ITestListener.super.onTestFailedWithTimeout(result);
+	}
 
-public void onStart(ITestContext context) {
+	public void onStart(ITestContext context) {
 
-	ITestListener.super.onStart(context);
-}
+		ITestListener.super.onStart(context);
+	}
 
-public void onFinish(ITestContext context) {
+	public void onFinish(ITestContext context) {
 
-	ITestListener.super.onFinish(context);
-	extent.flush();// to generate report
-}
+		ITestListener.super.onFinish(context);
+		extent.flush();
+	}
 }

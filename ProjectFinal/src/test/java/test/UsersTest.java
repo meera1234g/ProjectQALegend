@@ -1,18 +1,10 @@
 package test;
 
-
-	import java.time.Duration;
-
-import org.openqa.selenium.By;
-	import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import automationcore.BrowserLaunch;
+import automationcore.BaseClass;
 import constants.Constants;
-import pages.EditUserPage;
+import constants.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UsersPage;
@@ -20,19 +12,17 @@ import utilities.ExcelUtility;
 
 	
 
-	public class Users extends BrowserLaunch {
+	public class UsersTest extends BaseClass {
 		
-	@Test
+	@Test(description = "Verify Search By Field Functionality")
 		
 		public void verifySearchByField()
 		{
 		String username  = ExcelUtility.readStringData(0, 0, Constants.USERS_PAGE);
 	    String password  = ExcelUtility.readIntegerData(0, 1, Constants.USERS_PAGE);
-	    String expected_mailid = ExcelUtility.readStringData(0, 2,Constants.USERS_PAGE);
 	    String expected_name = ExcelUtility.readStringData(0, 3,Constants.USERS_PAGE);
 	    
-	    
-		LoginPage login  = new LoginPage(driver);
+	    LoginPage login  = new LoginPage(driver);
 	    login.enterUserName(username);
 	    login.enterPassword(password);
 	    login.clickOnLoginButton();
@@ -43,7 +33,7 @@ import utilities.ExcelUtility;
         UsersPage userpage = new UsersPage(driver);
         userpage.enterSearchValue(expected_name);
         String actual_name = userpage.getTextOfName();
-        Assert.assertEquals(actual_name, expected_name,"Search field not fuctioning as Expected");
+        Assert.assertEquals(actual_name, expected_name,Messages.SEARCHBYFIELD_ERROR);
         }
 	}
 
