@@ -22,7 +22,7 @@ public class AddUserTest extends BaseClass {
 		String first_name = RandomDataUtility.getFirstName();
 		String last_name = RandomDataUtility.getLastName();
 		String mailid = first_name + Constants.DOT + last_name + Constants.MAILID_EXTENSION;
-		String username_fieldnew = first_name;
+		String username_fieldnew = first_name + Constants.USRNAME_EXTNSN;
 		String password_new = first_name + Constants.DOT + last_name;
 		String search_value = mailid;
 
@@ -56,7 +56,7 @@ public class AddUserTest extends BaseClass {
 		String last_name = RandomDataUtility.getLastName();
 		String mailid = first_name + Constants.DOT + last_name + Constants.MAILID_EXTENSION;
 		String password_new = first_name + Constants.DOT + last_name;
-		String username_fieldnew = first_name;
+		String username_fieldnew = first_name + Constants.USRNAME_EXTNSN;
 		String expected_result = Constants.Welcome_MSG + first_name + Constants.COMMA;
 
 		LoginPage login = new LoginPage(driver);
@@ -96,7 +96,7 @@ public class AddUserTest extends BaseClass {
 		String last_name = RandomDataUtility.getLastName();
 		String mailid = first_name + Constants.DOT + last_name + Constants.MAILID_EXTENSION;
 		String password_new = first_name + Constants.DOT + last_name;
-		String username_fieldnew = first_name;
+		String username_fieldnew = first_name + Constants.USRNAME_EXTNSN;;
 		String search_value = mailid;
 
 		LoginPage login = new LoginPage(driver);

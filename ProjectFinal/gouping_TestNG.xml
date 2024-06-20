@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
 	<groups>
 		<run>
-			<include name="Reggression" />
-			<include name="Sanity" />
-			<include name="Smoke" />
+			<include name="Reggression"/>
+			<include name="Sanity"/>
+			<include name="Smoke"/>
 		</run>
 	</groups>
 	<test name="All Test Cases">
@@ -13,8 +13,8 @@
 		<parameter name="baseurl"
 			value="https://qalegend.com/billing/public/login"></parameter>
 		<classes>
-			<class name="test.LoginPageTest" />
-			<class name="test.HomePageTest" />
+			<class name="test.LoginPageTest"/>
+			<class name="test.HomePageTest"/>
 		</classes>
 	</test>
 </suite>

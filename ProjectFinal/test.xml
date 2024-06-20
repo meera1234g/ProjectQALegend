@@ -5,9 +5,9 @@
  <parameter name="browser" value="Chrome"></parameter>
  <parameter name="baseurl" value="https://qalegend.com/billing/public/login"></parameter>
  <classes>
- <class name="test.LoginPageTest">
+ <class name="test.AddUserTest">
 	 <methods>
-		 <include name="verifyUserLoginWithValidCredentials"/>
+		 <include name="verifyDeleteingNewlyAddedUser"/>
 	 </methods>
  </class>
  </classes>

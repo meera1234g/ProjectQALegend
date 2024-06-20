@@ -13,7 +13,7 @@ import pages.UserMangementPage;
 import utilities.ExcelUtility;
 
 public class UserMangementTest extends BaseClass {
-	@Test(description = "Verify Selection and Printing of list of elements under UserMangement")
+	@Test(groups = "Sanity", description = "Verify Selection and Printing of list of elements under UserMangement")
 	public void verifyPoolElementinUserMangement() {
 		String username = ExcelUtility.readStringData(0, 0, Constants.LOGIN_PAGE);
 		String password = ExcelUtility.readIntegerData(0, 1, Constants.LOGIN_PAGE);

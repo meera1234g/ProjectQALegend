@@ -10,6 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class HomePageTest extends BaseClass {
+	
 	@Test(groups = "Sanity", description = "Get the title of the Page")
 	public void getPageTitle() {
 		String username = ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE);

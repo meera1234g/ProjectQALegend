@@ -3,6 +3,7 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="generatereport.Listeners"/>
+    <listener class-name="listeners.Annotation_Transformer"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>
@@ -11,8 +12,8 @@
       <class name="test.AddUserTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="verifyUserLoginWithNewAddedUser"/>
           <include name="setup"/>
+          <include name="verifyUserLoginWithNewAddedUser"/>
         </methods>
       </class> <!-- test.AddUserTest -->
     </classes>

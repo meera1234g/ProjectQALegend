@@ -12,6 +12,7 @@ public class Constants {
 	public static final String ADD_USER = "AddUser";
 	public static final String USERS_PAGE = "Users";
 	public static final String MAILID_EXTENSION = "@yahoo.com";
+	public static final String USRNAME_EXTNSN = "qwerty";
 	public static final String Welcome_MSG = "Welcome ";
 	public static final String COMMA = ",";
 	public static final String DOT = ".";
