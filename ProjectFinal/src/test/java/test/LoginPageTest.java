@@ -29,7 +29,8 @@ public class LoginPageTest extends BaseClass {
 	@Test(groups = "Sanity", description = "Verify Login with Invalid Credentials", dataProvider = "invaliduserCredentials", dataProviderClass = DataProviders.class)
 	public void verifyUserLoginWithInvalidCredential(String username, String password) {
 		String expected_errormsg = ExcelUtility.readStringData(0, 3, Constants.LOGIN_PAGE);
-		LoginPage login = new LoginPage(driver);
+		
+	    LoginPage login = new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
 		login.clickOnLoginButton();
